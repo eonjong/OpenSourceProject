@@ -85,10 +85,14 @@
             anchor.href = link;
 
 
+            // 텍스트를 30자로 자르고, 넘어가면 '...'을 추가하여 표시
+            const truncatedHeadline = headline.length > 30 ? headline.substring(0, 30) + '...' : headline;
 
+            anchor.textContent = truncatedHeadline;
             anchor.textContent = truncatedHeadline;
 
             listItem.appendChild(anchor);
+
             newsList.appendChild(listItem);
           });
         })
